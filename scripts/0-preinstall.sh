@@ -46,7 +46,10 @@ echo -ne "
                     Installing Prerequisites
 -------------------------------------------------------------------------
 "
-pacman -S --noconfirm --needed gptfdisk btrfs-progs glibc
+pacman -S --noconfirm --needed gptfdisk glibc
+wget https://archive.archlinux.org/packages/b/btrfs-progs/btrfs-progs-6.10.1-2-x86_64.pkg.tar.zst
+pacman -U btrfs-progs-6.10.1-2-x86_64.pkg.tar.zst
+
 echo -ne "
 -------------------------------------------------------------------------
                     Formating Disk
